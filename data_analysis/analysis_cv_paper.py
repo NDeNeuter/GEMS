@@ -35,7 +35,6 @@ if __name__ == '__main__':
     preproc = GEA.Preprocessor()
     readcount_df = preproc.clean(readcount_df)
     readcount_df = preproc.combine_lane_counts(readcount_df)
-                                
     
     ''' Viral EV1: meningitis vs bacterial BM1: meningitis - leave-one-out cross validation setup'''
     
@@ -79,8 +78,8 @@ if __name__ == '__main__':
                                                  fold_threshold=fold_thres)
             deg_result.PCA('group', filename='PCA_normalized_sig_genes_foldthres{}'.format(fold_thres))
             deg_result.heatmap(filename='heatmap_normalized_sig_genes_foldthres{}'.format(fold_thres))
-
-
+    
+    
     ###############################
     ## do cross validation setup ##
     ###############################
